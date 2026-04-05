@@ -1,4 +1,4 @@
-I'm learning html, css and Javascript from this site below.
+I'm learning html, css and Javascript from these sites below.
 https://zenn.dev/ojk/books/intro-to-html-css/viewer/web-basic
 https://zenn.dev/ojk/books/intro-to-javascript/viewer/js-basic
 and I code with what the each article has, in addition, take notes as comment out.
