@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>画像と埋め込みコンテンツ</title>
+</head>
+
+<body>
+  <img src="画像データの場所" alt="画像の説明">
+  <!-- img要素は必須のsrc属性と推奨のalt属性を持つ空要素 -->
+  <!-- apng, avif, gif, jpeg, png, svg, webpに対応している-->
+  <!-- src要素は画像データの場所を「URL(使いにくい)」か「パス(後述)」を用いて指定する -->
+  <!-- alt属性は画像が表示できない場合に表示されたり、音声読み上げに用いられる -->
+
+  <!-- 場所を指定しないと文字の間に表示されるため、br要素を用いる -->
+  <!-- 画像の表示サイズを指定するには、widthとheight属性を用いる -->
+  <!-- 整数値のみのピクセル単位 圧縮展開が行われるが絶対的なものである -->
+  <!-- ブラウザの表示領域を考慮したサイズ指定などはCSSで行う -->
+
+  <!-- 相対パスの指定には3種類ある -->
+    <!-- "./" : 同じフォルダ内 -->
+      <img src="nur.webp"> <img src="./nur.webp">
+    <!-- "../" : 一つ前のフォルダ内 -->
+      <img src="../gabishima_for_Lesson_03.png"> 
+    <!-- "/" : 一つ下のフォルダ内 -->
+      <img src="images/nurkage.webp"> <img src="./images/nurkage.webp">
+  <!-- 絶対パスは、ルートフォルダからのパスで、先頭に"/"を付ける あまり使うことはない -->
+
+  <video autoplay muted controls width="600">
+    <source src="video.webm" type="video/webm">
+    <source src="video.mp4" type="video/mp4">
+    <p>動画が表示されないとき（ブラウザーが未対応など）に表示する文言</p>
+  </video>
+  <!-- 動画の配置にはvideo要素とsource要素を使う -->
+  <!-- mp4, webm, ogg, mov, avi, flv, wmvに対応している-->
+  <!-- type属性で拡張子を指定すると適切なコーディックが選ばれる -->
+  <!-- width, height属性のほかにautoplay muted, controls, loopなどの属性が使用可能 これらはboolean属性であり、-->
+  
+  <audio controls loop>
+    <source src="music.mp3" type="audio/mpeg">
+    <p>MP3に未対応です</p>
+  </audio>
+  <!-- 音声の配置にはaudio要素とsource要素を使う -->
+  
+  <video controls width="600" src="video.mp4" type="video/mp4"></video>
+  <!-- video要素もaudio要素も、子要素にsource要素を指定せず、直接属性をつけられる -->
+
+  <figure>
+    <img src="nur.webp" alt="ぬるぬるbyなるちゃん">
+    <figcaption>ぬるぬるbyなるちゃん</figcaption>
+  </figure>
+  <!-- htmlではグループ化は「要素で囲むこと」を意味する -->
+  <!-- figure要素は画像や映像とキャプションをグループ化する。 -->
+  <!-- figcaption要素はキャプションであり、本来の用途は本文から離れた場所に配置すること -->   
+  
+  <iframe
+
+
+</body>
+
+</html>
