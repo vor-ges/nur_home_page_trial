@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>フォームコンテンツ</title>
+  <style>
+    /* 行間を広げるおまじない */
+    body {
+      line-height: 2;
+    }
+  </style>
+</head>
+
+<body>
+  <form> 
+    名前：<input>
+    <button>送信</button>
+  </form>
+  <!-- htmlのformを使わずJavascriptを使ってサーバーにデータを送ることも可能 -->
+  <!-- フォームは右の連なっていくため、改行には<br>タグを使用する -->
+  <!-- 送信に際して任意の属性が存在するため後述する -->
+
+  <label>label要素あり：<input></label>
+  <br>
+  label要素なし：<input>
+  <!-- labelタグがあると、ユーザビリティが向上する -->
+  <!-- 項目名とフォームの両方を囲えないことがある -->
+
+  <table border="1">
+    <tr>
+      <td><label for="name">氏名</label></td>
+      <td><input id="name"></td>
+    </tr>
+  </table>
+  <!-- → フォームにid属性をつけ、labelのfor属性と一致させることでも対応付けれる -->
+  <!-- id名は一応日本語も絵文字も使えるが、ドキュメント内で固有である必要がある -->
+
+  <button type="submit">送信</button>
+  <button type="reset">クリア</button>
+  <button type="button">ボタン</button>
+  <!-- button要素には開始/終了タグがあり、コンテントを持つ -->
+  <!-- type属性で動作を指定でき、submitはフォームを送信し、resetはフォームをクリアする -->
+  <!-- button要素とform要素を対応付けないとtype属性が効かない -->
+
+  
+  
+
+</body>
+
+</html>
